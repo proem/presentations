@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Proem Framework</title>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="../reveal.js/css/reset.css">
+		<link rel="stylesheet" href="../reveal.js/css/main.css">
+		<link rel="stylesheet" href="../reveal.js/css/print.css" type="text/css" media="print">
+
+    <link rel="stylesheet" href="css/main.css">
+
+		<link rel="stylesheet" href="../reveal.js/lib/zenburn.css">
+	</head>
+
+	<body>
+
+		<div id="reveal">
+
+			<div class="state-background"></div>
+
+			<div class="slides">
+        <section>
+          <img width="240" src="assets/img/big-tree.png">
+          <h1>Proem Framework</h1>
+          <p><i>A lightweight, simple &amp; fast MVC implementation for PHP5.4</i></p>
+          <p><a href="http://proemframework.org">http://proemframework.org</a></p>
+				</section>
+
+				<section>
+					<h2>Who am I?</h2>
+					<h3>Tony R Quilkey</h3>
+          <p><small><a href="http://twitter.com/tonyrq">@tonyrq</a></small></p>
+          <ul>
+            <li>1+ years PHP Developer, Sentral Education</li>
+            <li>2.5+ years Web developer, Scholastic Australia</li>
+            <li>5+ years <a href="http://phpfreaks.com">phpfreaks.com</a> administrator</li>
+            <li>8+ years development - PHP, Python & Web</li>
+            <li>Linux user / contributer</li>
+            <li>OSS</li>
+          </ul>
+        </section>
+
+        <section>
+          <section>
+					  <h2>Why another framework?</h2>
+					  <ul>
+						  <li class="fragment">Zend</li>
+              <li class="fragment">Symfony</li>
+						  <li class="fragment">Yii</li>
+						  <li class="fragment">Kohana</li>
+						  <li class="fragment">Cake</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Objectives</h2>
+            <ul>
+              <li class="fragment">Proof</li>
+              <li class="fragment">Simplify</li>
+              <li class="fragment">Lightweight</li>
+              <li class="fragment">Extensability</li>
+            </ul>
+          </section>
+          <section>
+            <h2>History</h2>
+          </section>
+				</section>
+
+			</div>
+
+			<aside class="controls">
+				<a class="left" href="#">&#x25C4;</a>
+				<a class="right" href="#">&#x25BA;</a>
+				<a class="up" href="#">&#x25B2;</a>
+				<a class="down" href="#">&#x25BC;</a>
+			</aside>
+
+			<div class="progress"><span></span></div>
+
+		</div>
+
+		<script src="../reveal.js/js/reveal.js"></script>
+
+		<script src="../reveal.js/lib/highlight.js"></script>
+		<script src="../reveal.js/lib/classList.js"></script>
+
+		<script>
+			var query = {};
+			location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+				query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+			} );
+
+			Reveal.addEventListener( 'customevent', function() {
+				alert( '"customevent" has fired' );
+			} );
+
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+				// event.indexh & event.indexv
+			} );
+
+			Reveal.initialize({
+				// Display controls in the bottom right corner
+				controls: true,
+
+				// Display a presentation progress bar
+				progress: true,
+
+				// If true; each slide will be pushed to the browser history
+				history: true,
+
+				// Loops the presentation, defaults to false
+				loop: false,
+
+				// Flags if mouse wheel navigation should be enabled
+				mouseWheel: true,
+
+				// Apply a 3D roll to links on hover
+				rollingLinks: true,
+
+				// UI style
+				theme: query.theme || 'default', // default/neon
+
+				// Transition style
+				transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+			});
+
+			hljs.initHighlightingOnLoad();
+		</script>
+
+	</body>
+</html>
