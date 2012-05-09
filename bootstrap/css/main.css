@@ -25,6 +25,23 @@
 	        transition: none;
 }
 
+#reveal section img.diagram {
+  width: 680;
+	margin: 30px 0 0 0;
+	background: rgba(255,255,255,0.12);
+	border: 1px solid #ccc;
+
+	-webkit-box-shadow: 0 0 80px rgba(0, 0, 0, 2);
+	   -moz-box-shadow: 0 0 80px rgba(0, 0, 0, 2);
+	        box-shadow: 0 0 80px rgba(0, 0, 0, 2);
+
+	-webkit-transition: all .2s linear;
+	   -moz-transition: all .2s linear;
+	    -ms-transition: all .2s linear;
+	     -o-transition: all .2s linear;
+	        transition: all .2s linear;
+}
+
 #reveal pre {
   margin-top: 60px;
   box-shadow: 0px 0px 6px rgba(0,0,0,0.6);
