@@ -24,3 +24,8 @@
 	     -o-transition: none;
 	        transition: none;
 }
+
+#reveal pre {
+  margin-top: 60px;
+  box-shadow: 0px 0px 6px rgba(0,0,0,0.6);
+}

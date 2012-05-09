@@ -105,6 +105,64 @@
           </div>
         </section>
 
+        <section>
+
+          <section>
+
+            <h2>Hello World!</h2>
+            <i>Directory Structure</i>
+            <pre><code>Module\:module\Controller\:controller</code></pre>
+            <pre><code>
+.
+├── index.php
+├── lib
+│   └── Module
+│       └── Index
+│           └── Controller
+│               └── Hello.php
+└── proem.phar
+            </code></pre>
+
+        </section>
+
+        <section>
+
+          <i>Hello.php</i>
+          <pre><code class="php">
+namespace Module\Index\Controller;
+
+class Hello extends \Proem\Controller\Standard
+{
+    public function world()
+    {
+        $this->assets->get('response')->appendToBody('Hello World!');
+    }
+}
+          </code></pre>
+
+        </section>
+
+
+        <section>
+
+          <i>index.php</i>
+          <pre><code class="php">
+require_once 'phar://proem.phar';
+
+(new \Proem\Autoloader)
+    ->registerNamespace('Module', 'lib')
+    ->register();
+
+(new \Proem\Proem)->init();
+          </code></pre>
+
+          </section>
+
+          <section data-state="open-hello-world">
+          </section>
+
+      </section>
+
 			</div>
 
 			<aside class="controls">
@@ -127,15 +185,11 @@
 			var query = {};
 			location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
 				query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
-			} );
+			});
 
-			Reveal.addEventListener( 'customevent', function() {
-				alert( '"customevent" has fired' );
-			} );
-
-			Reveal.addEventListener( 'slidechanged', function( event ) {
-				// event.indexh & event.indexv
-			} );
+			Reveal.addEventListener('open-hello-world', function() {
+				window.open('http://dev.proem/hello/world');
+			});
 
 			Reveal.initialize({
 				// Display controls in the bottom right corner
